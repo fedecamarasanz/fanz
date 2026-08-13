@@ -515,7 +515,7 @@
 
         .recursos-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
         }
 
@@ -685,6 +685,12 @@
         }
 
         /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .recursos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 1024px) {
             .valores-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -923,6 +929,17 @@
                 <p>Análisis económico</p>
                 <a href="https://drive.google.com/drive/folders/1K8vq2sdZxJ7wT-io9-jeTVm7lvoXzINa?usp=sharing" target="_blank" class="recurso-link">
                     Ver análisis
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="recurso-card fade-in">
+                <div class="recurso-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                </div>
+                <h4>Resúmenes de Prensa</h4>
+                <p>Noticias y análisis diarios</p>
+                <a href="https://drive.google.com/drive/folders/1lRSf4hApClUs5z45I7nibT5_sjz6-ZuS?usp=sharing" target="_blank" class="recurso-link">
+                    Ver resúmenes
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
             </div>
