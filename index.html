@@ -189,7 +189,7 @@
         .contact-card h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
         .contact-card p, .contact-card a { color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; }
         .contact-card a:hover { color: var(--color-secondary); }
-        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 3rem; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap; }
         .social-links a { width: 50px; height: 50px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: var(--transition); }
         .social-links a:hover { background: var(--color-secondary); color: var(--color-primary); transform: translateY(-5px); }
 
@@ -381,17 +381,14 @@
         </div>
     </section>
 
-    <!-- Events (UPDATED TO GRID) -->
+    <!-- Events -->
     <section id="eventos">
         <div class="section-header">
             <h2>Calendario Institucional</h2>
             <p>Fedecámaras Anzoátegui apoya en la organización y dirección de estos eventos diseñados para el impulso del desarrollo económico, la innovación y las oportunidades de negocio en nuestra región.</p>
         </div>
         
-        <!-- Grid Container -->
         <div class="events-grid">
-            
-            <!-- PRÓXIMOS EVENTOS -->
             <div class="event-card">
                 <span class="event-badge upcoming">Próximo</span>
                 <div class="event-date">23-24 OCT 2026</div>
@@ -408,7 +405,6 @@
                 <a href="https://www.instagram.com/p/DbyJelPnPya/?igsi=dG5zaGlrc3VwbzN5" class="btn btn-primary" target="_blank"><i class="fas fa-ticket-alt"></i> Ver información</a>
             </div>
 
-            <!-- NUEVO EVENTO AGREGADO -->
             <div class="event-card">
                 <span class="event-badge upcoming">Próximo</span>
                 <div class="event-date">03 DIC 2026</div>
@@ -417,7 +413,6 @@
                 <a href="https://cacoinnatur.github.io/ncp3/" class="btn btn-primary" target="_blank"><i class="fas fa-ticket-alt"></i> Ver información</a>
             </div>
 
-            <!-- EVENTOS PASADOS -->
             <div class="event-card past">
                 <span class="event-badge past">Finalizado</span>
                 <div class="event-date">10 SEP 2026</div>
@@ -441,7 +436,6 @@
                 <p class="event-organizer">Organiza: AVEX</p>
                 <a href="https://fedecamarasanz.github.io/avex/" class="btn btn-secondary" target="_blank"><i class="fas fa-info-circle"></i> Ver información</a>
             </div>
-
         </div>
     </section>
 
@@ -449,7 +443,7 @@
     <section id="contacto">
         <div class="section-header">
             <h2>Conecta con Nosotros</h2>
-            <p>Escríbenos directamente y te responderemos a la brevedad posible a través de WhatsApp.</p>
+            <p>Mantente al día con nuestras actividades, noticias y eventos a través de nuestros canales oficiales.</p>
         </div>
 
         <!-- Formulario de WhatsApp -->
@@ -487,8 +481,14 @@
             </div>
             <div class="contact-card">
                 <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                <h4>WhatsApp</h4>
+                <h4>WhatsApp Directo</h4>
                 <a href="http://wa.me/+584224042020" target="_blank">+58 422-4042020</a>
+            </div>
+            <!-- NUEVA TARJETA: CANAL DE WHATSAPP -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-bullhorn"></i></div>
+                <h4>Canal de WhatsApp</h4>
+                <a href="https://whatsapp.com/channel/0029VbCRJhp2P59rMik8k30x" target="_blank">Únete al canal oficial</a>
             </div>
             <div class="contact-card">
                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
@@ -500,7 +500,9 @@
         <div class="social-links">
             <a href="https://www.instagram.com/fedecamarasanz?utm_source=qr&igsh=MWg3Y25ucWRlaWs3Zw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/fedecamarasanz" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-            <a href="http://wa.me/+584224042020" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <!-- NUEVO ENLACE EN REDES SOCIALES -->
+            <a href="https://whatsapp.com/channel/0029VbCRJhp2P59rMik8k30x" target="_blank" aria-label="Canal de WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="http://wa.me/+584224042020" target="_blank" aria-label="WhatsApp Chat"><i class="fas fa-comment-dots"></i></a>
             <a href="mailto:fedecamaras.anz@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
@@ -513,7 +515,7 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="http://wa.me/+584224042020" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <a href="http://wa.me/+584224042020" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -564,9 +566,7 @@
             observer.observe(card);
         });
 
-        // ==========================================
-        // LÓGICA DEL FORMULARIO DE WHATSAPP
-        // ==========================================
+        // Lógica del Formulario de WhatsApp
         function enviarWhatsApp(event) {
             event.preventDefault(); 
             
